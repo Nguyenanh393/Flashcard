@@ -132,8 +132,6 @@ public class HomeMenu extends javax.swing.JFrame {
     }//GEN-LAST:event_flashcardButtActionPerformed
 
     private void multiChoiceButtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_multiChoiceButtActionPerformed
-        // TODO add your handling code here:
-        // chuyển sang màn hình trắc nghiệm
         this.setVisible(false);
         new MultiMenu().setVisible(true);
     }//GEN-LAST:event_multiChoiceButtActionPerformed
