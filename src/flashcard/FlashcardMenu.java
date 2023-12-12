@@ -192,7 +192,6 @@ public class FlashcardMenu extends javax.swing.JFrame {
     }//GEN-LAST:event_startButtonMouseClicked
 
     private void getDataFromFileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_getDataFromFileActionPerformed
-        // TODO add your handling code here:
         JFileChooser fileChooser = new JFileChooser();
         FileNameExtensionFilter dataFilter = new FileNameExtensionFilter("du lieu", "txt", "csv");
         fileChooser.setFileFilter(dataFilter);
