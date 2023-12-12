@@ -106,7 +106,6 @@ public class Flashcard extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
     
     private void upSideActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_upSideActionPerformed
-        // đổi sang mặt dưới
         jPanel1.removeAll();
         jPanel1.add(downSide);
         jPanel1.repaint();
@@ -124,14 +123,12 @@ public class Flashcard extends javax.swing.JFrame {
             String nextKey = flashcardIterator.next();
             showFlashcard(nextKey);
         } else {
-            // If there are no more flashcards, you can handle it here (e.g., go back to the beginning)
             flashcardIterator = flashcardsMap.keySet().iterator();
-            showNextFlashcard();  // Recursive call to show the first flashcard again
+            showNextFlashcard(); 
         }
     }
 
     private void downSideActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_downSideActionPerformed
-        // đổi sang mặt trên
         jPanel1.removeAll();
         jPanel1.add(upSide);
         jPanel1.repaint();
@@ -139,8 +136,6 @@ public class Flashcard extends javax.swing.JFrame {
     }//GEN-LAST:event_downSideActionPerformed
 
     private void nextCardButtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextCardButtActionPerformed
-        // TODO add your handling code here:
-        // đổi sang thẻ tiếp theo
         showNextFlashcard();
 
     }//GEN-LAST:event_nextCardButtActionPerformed
