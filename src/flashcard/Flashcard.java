@@ -40,6 +40,8 @@ public class Flashcard extends javax.swing.JFrame {
 
         Collections.shuffle(UpArrayList);
         flashcardIterator = UpArrayList.iterator();
+
+        showNextFlashcard();
     }
 
     /**
@@ -145,6 +147,11 @@ public class Flashcard extends javax.swing.JFrame {
     }//GEN-LAST:event_downSideActionPerformed
 
     private void nextCardButtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextCardButtActionPerformed
+        jPanel1.removeAll();
+        jPanel1.add(upSide);
+        jPanel1.repaint();
+        jPanel1.revalidate();
+
         showNextFlashcard();
 
     }//GEN-LAST:event_nextCardButtActionPerformed
