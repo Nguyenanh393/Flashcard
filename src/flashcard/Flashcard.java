@@ -76,8 +76,10 @@ public class Flashcard extends javax.swing.JFrame {
         });
         jPanel1.add(upSide, "card2");
 
-        downSide.setFont(new java.awt.Font("Segoe UI", 0, 40)); // NOI18N
+        downSide.setFont(new java.awt.Font("Segoe UI", 0, 30)); // NOI18N
         downSide.setText("Downside");
+        downSide.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        downSide.setIconTextGap(5);
         downSide.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 downSideActionPerformed(evt);
@@ -122,7 +124,8 @@ public class Flashcard extends javax.swing.JFrame {
 
     public void showFlashcard(String key) {
         upSide.setText(key);
-        downSide.setText(flashcardsMap.get(key));
+        String[] value = flashcardsMap.get(key).split(" - ");
+        downSide.setText("<html>" + value[0] + "<br>" + value[1] + "</html>");
     }
 
     public void showNextFlashcard() {
