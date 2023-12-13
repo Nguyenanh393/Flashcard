@@ -5,6 +5,8 @@
 package flashcard;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
@@ -30,9 +32,14 @@ public class Flashcard extends javax.swing.JFrame {
         for (String[] flashcard : flashcards) {
             flashcardsMap.put(flashcard[0], flashcard[1]);
         }
+        
+        ArrayList<String> UpArrayList = new ArrayList<>();
+        for (String[] flashcard : flashcards) {
+            UpArrayList.add(flashcard[0]);
+        }
 
-        flashcardIterator = flashcardsMap.keySet().iterator();
-        showNextFlashcard();
+        Collections.shuffle(UpArrayList);
+        flashcardIterator = UpArrayList.iterator();
     }
 
     /**
@@ -120,11 +127,10 @@ public class Flashcard extends javax.swing.JFrame {
 
     public void showNextFlashcard() {
         if (flashcardIterator.hasNext()) {
-            String nextKey = flashcardIterator.next();
-            showFlashcard(nextKey);
+            showFlashcard(flashcardIterator.next());
         } else {
             flashcardIterator = flashcardsMap.keySet().iterator();
-            showNextFlashcard(); 
+            showFlashcard(flashcardIterator.next());
         }
     }
 
