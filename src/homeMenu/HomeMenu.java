@@ -124,8 +124,6 @@ public class HomeMenu extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void flashcardButtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_flashcardButtActionPerformed
-        // TODO add your handling code here:
-        // chuyển sang màn hình flashcard
         this.setVisible(false);
         new FlashcardMenu().setVisible(true);
 
