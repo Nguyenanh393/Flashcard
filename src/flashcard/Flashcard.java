@@ -68,7 +68,7 @@ public class Flashcard extends javax.swing.JFrame {
         jPanel1.setLayout(new java.awt.CardLayout());
 
         upSide.setFont(new java.awt.Font("SimSun", 0, 48)); // NOI18N
-        upSide.setText("jButton4");
+        upSide.setText("Upside");
         upSide.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 upSideActionPerformed(evt);
@@ -77,7 +77,7 @@ public class Flashcard extends javax.swing.JFrame {
         jPanel1.add(upSide, "card2");
 
         downSide.setFont(new java.awt.Font("Segoe UI", 0, 40)); // NOI18N
-        downSide.setText("jButton5");
+        downSide.setText("Downside");
         downSide.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 downSideActionPerformed(evt);
