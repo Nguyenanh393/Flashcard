@@ -134,8 +134,7 @@ public class Flashcard extends javax.swing.JFrame {
         if (flashcardIterator.hasNext()) {
             showFlashcard(flashcardIterator.next());
         } else {
-            flashcardIterator = flashcardsMap.keySet().iterator();
-            showFlashcard(flashcardIterator.next());
+            this.dispose();
         }
     }
 
